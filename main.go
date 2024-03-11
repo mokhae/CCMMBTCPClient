@@ -85,7 +85,7 @@ func main() {
 		logs.Fatal("The config file is not correct.")
 	}
 
-	if runtime.GOOS != "windows" {
+	if runtime.GOOS == "linux" {
 		if checkLicense() == false {
 			logs.Fatal("The license is invalid.")
 		}
